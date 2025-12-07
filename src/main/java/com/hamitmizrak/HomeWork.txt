@@ -8,3 +8,4 @@ S-7) W3shool üzerinden Java çalışma devam edelim.
 S-8) Boxing, unboxing nedir ?
 S-9) for ile while araısndaki farklar nelerdir ?
 S-10) Java8 gelen özellikler nelerdir ? (optional, Lambda expression)
+S-11) Debug Nedir ?
