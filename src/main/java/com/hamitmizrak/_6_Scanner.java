@@ -1,5 +1,6 @@
 package com.hamitmizrak;
 
+
 import java.util.Scanner;
 
 public class _6_Scanner {
