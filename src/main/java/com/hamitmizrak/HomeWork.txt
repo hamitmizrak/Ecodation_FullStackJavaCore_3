@@ -6,3 +6,4 @@ s-5) Stack memory, Heap memory nedir ? aralarında farklar nelerdir ?
 S-6) Java OOP midir ?
 S-7) W3shool üzerinden Java çalışma devam edelim.
 S-8) Boxing, unboxing nedir ?
+S-9) for ile while araısndaki farklar nelerdir ?
