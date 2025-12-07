@@ -10,7 +10,11 @@ public class _2_DataTypes {
      _ veya & ile başlanır
 
 
-    Primitive stack memory kullanıır ,daha hızlıdır Heap memeory'e göre
+    Primitive types:
+    daha hızlı
+     stack memory kullanılır ,
+     daha hızlıdır Heap memeory'e göre
+     null veremezsiniz
     *
     *  */
 
@@ -21,6 +25,7 @@ public class _2_DataTypes {
         byte primitiveByte = 127;
         short primitiveShort = 140;
         int primitiveInt = 140;
+        long primitiveLong = 151515155154L;
 
         // Floating point
         float primitiveFloat = 14.53f;
