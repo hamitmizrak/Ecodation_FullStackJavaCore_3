@@ -1,0 +1,7 @@
+S-1) Java Nedir ? Neden Java Öğreniyorum ?
+S-2) Java 8 ile Java 11 neden piyasada çok tercih edilir ?
+S-3) Compiler, interpreter nedir ? java compiler mi ? interpreter mi ?
+S-4) primitive type nedir ? Wrapper Type nedir ? aralarındaki farklar nedir ?
+s-5) Stack memory, Heap memory nedir ? aralarında farklar nelerdir ?
+S-6) Java OOP midir ?
+S-7) W3shool üzerinden Java çalışma devam edelim.

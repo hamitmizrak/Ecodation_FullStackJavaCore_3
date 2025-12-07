@@ -7,9 +7,8 @@ Multiple Comment
 public class _1_WhatIsJava {
 
     /*psvm => TAB*/
-    static void main() {
+   public static void main(String[] args) {
         // sout => TAB
         System.out.println("Merhabalar 44");
-
     }
 }
