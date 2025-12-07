@@ -1,4 +1,4 @@
-package com.hamitmizrak;
+package com.hamitmizrak.tutorials_core3;
 
 
 import java.util.Scanner;

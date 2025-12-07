@@ -1,4 +1,4 @@
-package com.hamitmizrak;
+package com.hamitmizrak.tutorials_core3;
 
 public class _4_Operators {
     static void main() {

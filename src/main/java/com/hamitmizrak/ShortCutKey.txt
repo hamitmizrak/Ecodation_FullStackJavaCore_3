@@ -2,3 +2,4 @@ Ctrl+Alt+L     = Beautify
 Ctrl+D         = Copy
 Ctrl+Alt+O     = Gereksiz importları veya kullanamdığım kütüphaneleri siler
 Shift +F6      = Rename
+Ctrl+Shift+/   = Comment
