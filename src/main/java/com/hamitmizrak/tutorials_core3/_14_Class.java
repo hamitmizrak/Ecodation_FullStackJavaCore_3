@@ -1,4 +1,4 @@
 package com.hamitmizrak.tutorials_core3;
 
-public class _14_OOP {
+public class _14_Class {
 }
