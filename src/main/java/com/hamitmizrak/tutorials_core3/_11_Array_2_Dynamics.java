@@ -99,10 +99,9 @@ public class _11_Array_2_Dynamics {
         scanner.close();
     }
 
-
     // PSVM
     static void main() {
         anabilesen();
-    }
+    } //end PSVM
 
-}
+} //end class
