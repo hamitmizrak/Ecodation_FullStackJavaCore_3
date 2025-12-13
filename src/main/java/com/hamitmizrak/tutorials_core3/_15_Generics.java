@@ -1,4 +1,4 @@
 package com.hamitmizrak.tutorials_core3;
 
-public class _12_AccessModifier {
+public class _15_Generics {
 }
