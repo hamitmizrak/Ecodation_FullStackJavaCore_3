@@ -1,4 +1,4 @@
 package com.hamitmizrak.tutorials_core3;
 
-public class _14_1_Class {
+public class _14_1_AccessModifier {
 }
