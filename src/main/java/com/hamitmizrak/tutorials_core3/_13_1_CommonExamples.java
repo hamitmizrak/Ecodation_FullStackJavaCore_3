@@ -26,39 +26,41 @@ public class _13_1_CommonExamples {
     // ENUM
     // ==================================================
     public enum EParity{
-        TEK,CIFT;
+        ODD, EVEN;  // ODD:Tek EVEN:Çift
 
         // MEthod
         public boolean mathches(int number){
-            if(TEK==this){
+           /* if(ODD ==this){
                 return number%2!=0; // Tek
             }
-            return number%2==0; // Çift
+            return number%2==0; // Çift*/
+            return (this==ODD) ? (number%2!=0) : (number%2==0);
         }
+
     }
 
     // ==================================================
     // RASTGELE SAYI
     // ==================================================
     // Rastgeler sayıları diziye dolduran metot
-    public static int[] rastgeleSayilarUret(int ustSinir,int sayi) {
+    public static int[] generateRandomNumbers(int upperBoundInclusive, int count) {
         Random random = new Random();
-        int[] sayilar = new int[sayi];
+        int[] numbers = new int[count];
 
-        for (int i = 0; i < sayi; i++) {
+        for (int i = 0; i < count; i++) {
             //sayilar[i] = random.nextInt(100); //0-99
-            sayilar[i] = random.nextInt(ustSinir)+1; //1 <=SAYI<=ustSinit
+            numbers[i] = random.nextInt(upperBoundInclusive)+1; //1 <=SAYI<=ustSinit
         }
-        return sayilar;
+        return numbers;
     }
 
     // ==================================================
     // DİZİ YAZDIR
     // ==================================================
     // Dizi ekrana yazdıran metot
-    public static void diziYazdir(int[] dizi) {
-        System.out.println("Oluşturulan sayılar ");
-        for (int sayi : dizi) {
+    public static void printArray(int[] array) {
+        System.out.print("Oluşturulan sayılar:  ");
+        for (int sayi : array) {
             System.out.print(sayi + " ");
         }
         System.out.println();
@@ -67,38 +69,45 @@ public class _13_1_CommonExamples {
     // ==================================================
     // TOPLAM SAYI
     // ==================================================
-    // Tüm sayıları toplamı(Tek/Çift/Enum)
-    public static int enumToplamHesapla(int[] dizi, EParity eParity) {
-        int toplam = 0;
+    // Tüm sayıları toplamı
+    public static int sumAll(int[] array) {
+        int total = 0;
+        for (int temp: array){
+            total+=temp;
+        }
+        return total;
+    }
+
+
+    public static int sumByParity(int[] dizi, EParity eParity) {
+        int total = 0;
         for (int temp : dizi) {
             if(eParity.mathches(temp)){
-                toplam+=temp;
+                total+=temp;
             }
         }
-        return toplam;
+        return total;
     }
 
     // ==================================================
-    // ÇİFT SAYI
+    // ÇİFT SAYI (EVEN)
     // ==================================================
-
-    // Tüm sayıları toplamı (ENUM)
-    public static int enumCiftToplamHesapla(int[] dizi) {
-        return enumToplamHesapla(dizi, EParity.CIFT);
+    public static int sumEven(int[] array) {
+        return sumByParity(array, EParity.EVEN);
     }
 
     // ==================================================
-    // TEK SAYI
+    // TEK SAYI (ODD)
     // ==================================================
-    public static int enumTekToplamHesapla(int[] dizi) {
-        return enumToplamHesapla(dizi, EParity.TEK);
+    public static int sumOdd(int[] dizi) {
+        return sumByParity(dizi, EParity.ODD);
     }
 
     // ==================================================
     // EXCEPTION
     // Kullanıcı eğer harf veya özel simge vermemesi gerekiyor ? (InputMismatchException)
     // ==================================================
-    public static int okuIntOrThrow(Scanner scanner, String mesaj) throws InputMismatchException{
+    public static int readIntOrThrow(Scanner scanner, String mesaj) throws InputMismatchException{
 
         System.out.println(mesaj);
 
@@ -113,8 +122,8 @@ public class _13_1_CommonExamples {
     // ==================================================
     // okuIntAralikli
     // ==================================================
-    public static int okuIntAralikli(Scanner scanner, String mesaj, int min, int max){
-        int sayi = okuIntOrThrow(scanner,mesaj);
+    public static int readIntRange(Scanner scanner, String mesaj, int min, int max){
+        int sayi = readIntOrThrow(scanner,mesaj);
         if(sayi<min || sayi>max){
             throw new InputMismatchException("Geçersiz aralık. "+ min+" ile " +max+ " değer aralığında bir sayı giriniz ve Girilen: "+sayi);
         }
@@ -124,45 +133,44 @@ public class _13_1_CommonExamples {
     // ==================================================
     // ANA
     // ==================================================
-    public static void anabilesen() {
+    public static void runApp() {
+        System.out.println("====================================================");
         System.out.println("Çalıştırma Tarihi: "+RUN_AT.format(RUN_AT_FORMAT));
+        System.out.println("====================================================");
 
-        Scanner scanner= new Scanner(System.in);
-        try{
+        try(Scanner scanner= new Scanner(System.in)){
 
-            int sayi= okuIntAralikli(scanner, "Kaç tane rastgele sayı üretmek istiyorusunuz ?",1,5);
+            int count= readIntRange(scanner, "Kaç tane rastgele sayı üretmek istiyorusunuz ?",1,5);
 
-            int ustSinir= okuIntAralikli(scanner,"Rastgele sayı için üst sınır kaç olmalıdır ?", 1, Integer.MAX_VALUE);
+            int upperBound= readIntRange(scanner,"Rastgele sayı için üst sınır kaç olmalıdır ?", 1, Integer.MAX_VALUE);
 
 
-            int[] sayilar= rastgeleSayilarUret(ustSinir,sayi);
+            int[] numbers= generateRandomNumbers(upperBound,count);
 
             //Dizi yazdır
-            diziYazdir(sayilar);
+            printArray(numbers);
 
             // Toplamları Hesapla
-            int toplam = enumToplamHesapla(sayilar,EParity.CIFT);
-            int tekToplam= enumTekToplamHesapla(sayilar);
-            int ciftToplam= enumCiftToplamHesapla(sayilar);
+            int total = sumAll(numbers);
+            int oddTotal= sumOdd(numbers);
+            int evenTotal= sumEven(numbers);
 
             // Sonuçlar
-            System.out.println("Toplam: "+ toplam);
-            System.out.println("Tek sayı Toplam: "+ toplam);
-            System.out.println("Çift Sayı Toplam: "+ toplam);
+            System.out.println("Toplam: "+ total);
+            System.out.println("Tek sayı Toplam: "+ oddTotal);
+            System.out.println("Çift Sayı Toplam: "+ evenTotal);
 
         }catch (InputMismatchException mismatchException){
             //e.printStackTrace();
             System.out.println("HATA (InputMismatchException): "+mismatchException.getMessage());
             throw mismatchException;
-        }finally {
-            scanner.close();
         }
 
     }
 
     // PSVM
     static void main() {
-        anabilesen();
+        runApp();
     } //end PSVM
 
 } //end class
