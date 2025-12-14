@@ -141,7 +141,7 @@ public class _13_1_CommonExamples {
             diziYazdir(sayilar);
 
             // Toplamları Hesapla
-            int toplam = enumToplamHesapla(sayilar);
+            int toplam = enumToplamHesapla(sayilar,EParity.CIFT);
             int tekToplam= enumTekToplamHesapla(sayilar);
             int ciftToplam= enumCiftToplamHesapla(sayilar);
 
