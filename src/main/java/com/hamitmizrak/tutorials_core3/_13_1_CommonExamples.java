@@ -113,11 +113,35 @@ public class _13_1_CommonExamples {
     }
 
 
+    // ==================================================
+    // EXCEPTION
+    // Kullanıcı eğer harf veya özel simge vermemesi gerekiyor ? (InputMismatchException)
+    // ==================================================
+    public static int okuIntAralikli(Scanner scanner, String mesaj, int min, int max){
+        int sayi = okuIntOrThrow(scanner,mesaj);
+        if(sayi<min || sayi>max){
+            throw new InputMismatchException("Geçersiz aralık. "+ min+" ile " +max+ " değer aralığında bir sayı giriniz ve Girilen: "+sayi);
+        }
+        return sayi;
+    }
+
 
     // ==================================================
     // ANA
     // ==================================================
     public static void anabilesen() {
+        System.out.println("Çalıştırma Tarihi: "+RUN_AT.format(RUN_AT_FORMAT));
+
+        Scanner scanner= new Scanner(System.in);
+        try{
+
+        }catch (InputMismatchException mismatchException){
+            //e.printStackTrace();
+            System.out.println("HATA (InputMismatchException): "+mismatchException.getMessage());
+            throw mismatchException;
+        }finally {
+            scanner.close();
+        }
 
     }
 
