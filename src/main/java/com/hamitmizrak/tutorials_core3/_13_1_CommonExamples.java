@@ -114,8 +114,7 @@ public class _13_1_CommonExamples {
 
 
     // ==================================================
-    // EXCEPTION
-    // Kullanıcı eğer harf veya özel simge vermemesi gerekiyor ? (InputMismatchException)
+    // okuIntAralikli
     // ==================================================
     public static int okuIntAralikli(Scanner scanner, String mesaj, int min, int max){
         int sayi = okuIntOrThrow(scanner,mesaj);
