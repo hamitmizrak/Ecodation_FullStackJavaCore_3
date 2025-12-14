@@ -115,6 +115,7 @@ public class _13_1_CommonExamples {
         if(!scanner.hasNextInt()){
             String hataliGirdi=scanner.next(); // hatalı token üret
             throw  new InputMismatchException("Sadece tam sayı giriniz. Hatalı Giriş '"+hataliGirdi+"'");
+            //System.out.println("Sadece tam sayı giriniz. Hatalı Giriş '"+hataliGirdi+"'");
         }
         return scanner.nextInt();
     }
@@ -170,7 +171,14 @@ public class _13_1_CommonExamples {
 
     // PSVM
     static void main() {
-        runApp();
+       /* while(true){
+            runApp();
+        }*/
+
+        for(;;){
+            runApp();
+        }
+
     } //end PSVM
 
 } //end class
