@@ -64,7 +64,6 @@ public class _13_1_CommonExamples {
         System.out.println();
     }
 
-
     // ==================================================
     // TOPLAM SAYI
     // ==================================================
@@ -95,7 +94,6 @@ public class _13_1_CommonExamples {
         return enumToplamHesapla(dizi, EParity.TEK);
     }
 
-
     // ==================================================
     // EXCEPTION
     // Kullanıcı eğer harf veya özel simge vermemesi gerekiyor ? (InputMismatchException)
@@ -112,7 +110,6 @@ public class _13_1_CommonExamples {
         return scanner.nextInt();
     }
 
-
     // ==================================================
     // okuIntAralikli
     // ==================================================
@@ -124,7 +121,6 @@ public class _13_1_CommonExamples {
         return sayi;
     }
 
-
     // ==================================================
     // ANA
     // ==================================================
@@ -133,6 +129,26 @@ public class _13_1_CommonExamples {
 
         Scanner scanner= new Scanner(System.in);
         try{
+
+            int sayi= okuIntAralikli(scanner, "Kaç tane rastgele sayı üretmek istiyorusunuz ?",1,5);
+
+            int ustSinir= okuIntAralikli(scanner,"Rastgele sayı için üst sınır kaç olmalıdır ?", 1, Integer.MAX_VALUE);
+
+
+            int[] sayilar= rastgeleSayilarUret(ustSinir,sayi);
+
+            //Dizi yazdır
+            diziYazdir(sayilar);
+
+            // Toplamları Hesapla
+            int toplam = enumToplamHesapla(sayilar);
+            int tekToplam= enumTekToplamHesapla(sayilar);
+            int ciftToplam= enumCiftToplamHesapla(sayilar);
+
+            // Sonuçlar
+            System.out.println("Toplam: "+ toplam);
+            System.out.println("Tek sayı Toplam: "+ toplam);
+            System.out.println("Çift Sayı Toplam: "+ toplam);
 
         }catch (InputMismatchException mismatchException){
             //e.printStackTrace();
