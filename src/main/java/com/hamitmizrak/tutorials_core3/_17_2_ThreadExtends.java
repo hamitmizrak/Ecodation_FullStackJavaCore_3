@@ -45,7 +45,6 @@ public class _17_2_ThreadExtends extends Thread{
        thread2.join();
        thread3.start();
        thread4.start();
-
     }
 }
 
