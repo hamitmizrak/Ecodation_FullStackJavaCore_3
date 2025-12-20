@@ -51,6 +51,19 @@ public class _16_2_ArrayList {
             System.out.print(temp+" ");
         }
 
+        // ForEach
+        System.out.println("\n\n=== FOREACH JAVA8 LOOP ===");
+        cityList.stream().forEach((temp)->{
+            System.out.print(temp+    " ");
+        });
+
+
+        // ForEach
+        System.out.println("\n\n=== FOREACH JAVA8 LOOP ===");
+        cityList.forEach((temp)->{
+            System.out.print(temp+    " ");
+        });
+
         // reverse önceinde mutlaka Collections.sort()
         Collections.reverse(cityList);
 
