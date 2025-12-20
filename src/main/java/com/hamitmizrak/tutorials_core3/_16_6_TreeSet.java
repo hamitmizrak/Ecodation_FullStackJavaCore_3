@@ -1,12 +1,14 @@
 package com.hamitmizrak.tutorials_core3;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class _16_3_LinkedList {
+public class _16_6_TreeSet {
 
     private  void dataSet(){
         // Listeler Sıfırdan(0) başlar saymaya
-        List<String> cityList = new LinkedList<>();
+        Set<String> cityList = new TreeSet<>();
         cityList.add("Malatya");
         cityList.add("Elazığ");
         cityList.add("Bingöl");
@@ -30,17 +32,15 @@ public class _16_3_LinkedList {
         // Iteratif
         System.out.println("=== ITERATIVE LOOP ===");
         for (int i = 0; i <cityList.size() ; i++) {
-            System.out.print(cityList.get(i)+" ");
+            // SET get özelliği yoktur
+            //System.out.print(cityList.get(i)+" ");
         }
 
         // istediğimiz indistekdei listeden elemanı sildi
-        cityList.remove(0);
+        //cityList.remove(0);
 
         // Listede bütün verileri temizledi
         //cityList.clear();
-
-        // Sıralama
-        Collections.sort(cityList);
 
         // ForEach
         System.out.println("\n\n=== FOR EACH LOOP ===");
@@ -48,23 +48,17 @@ public class _16_3_LinkedList {
             System.out.print(temp+" ");
         }
 
-        // reverse önceinde mutlaka Collections.sort()
-        Collections.reverse(cityList);
-
         // Iterator
         System.out.println("\n\n=== ITERATOR LOOP ===");
         Iterator iterator=cityList.iterator();
         while(iterator.hasNext()){
             System.out.print( iterator.next()+" ");
         }
-
     }
-
-
 
     // PSVM
     static void main() {
-        _16_3_LinkedList data= new _16_3_LinkedList();
+        _16_6_TreeSet data= new _16_6_TreeSet();
         data.dataSet();
 
     }

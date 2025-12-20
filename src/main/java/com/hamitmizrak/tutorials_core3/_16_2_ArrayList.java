@@ -18,6 +18,8 @@ public class _16_2_ArrayList {
         cityList.add("Ankara");
         cityList.add("İstanbul");
         cityList.add("Bolu");
+        cityList.add("Malatya");
+        cityList.add("Malatya");
 
         //Hash code
         System.out.println("\nparmak izi: "+ cityList.hashCode());
@@ -60,7 +62,6 @@ public class _16_2_ArrayList {
         }
 
     }
-
 
 
     // PSVM
