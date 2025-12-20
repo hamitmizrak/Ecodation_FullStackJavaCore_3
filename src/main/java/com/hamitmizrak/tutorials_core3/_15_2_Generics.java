@@ -2,6 +2,7 @@ package com.hamitmizrak.tutorials_core3;
 
 import com.hamitmizrak.SpecialColor;
 
+// Generics
 public class _15_2_Generics <T> {
 
     // Field
@@ -41,7 +42,5 @@ public class _15_2_Generics <T> {
         okGenerics.printData("Merhabalar");
         okGenerics.printData(44);
         okGenerics.printData(44.23);
-
-
     }
 }
