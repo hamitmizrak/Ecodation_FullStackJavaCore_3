@@ -36,7 +36,9 @@ public class _15_2_Generics <T> {
         _15_2_Generics okGenerics= new _15_2_Generics();
         //nonGenerics.setUsername("HamitMızrak");
         okGenerics.setUsername(44); //verebiliriz.
-        System.out.println(SpecialColor.BLUE+okGenerics.getUsername()+SpecialColor.RESET);
+
+        System.out.println(okGenerics.getUsername());
+        System.out.println(SpecialColor.BLUE+okGenerics.getUsername());
 
         okGenerics.printData(true);
         okGenerics.printData("Merhabalar");
