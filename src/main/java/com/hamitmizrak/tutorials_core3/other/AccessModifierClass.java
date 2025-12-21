@@ -1,12 +1,13 @@
 package com.hamitmizrak.tutorials_core3.other;
 
-import com.hamitmizrak.tutorials_core3.some.Person;
 
-public class Student {
+import com.hamitmizrak.tutorials_core3.some.Health;
+
+public class AccessModifierClass {
 
 
     static void main() {
-        Person person= new Person();
+        Health person= new Health();
 
         System.out.println(person.publicData);
         //System.out.println(person.privateData);

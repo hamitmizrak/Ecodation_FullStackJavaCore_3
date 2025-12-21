@@ -1,6 +1,6 @@
 package com.hamitmizrak.tutorials_core3.some;
 
-public class Person {
+public class Health {
 
     public String publicData = "public verilerim";
     private String privateData = "private verilerim";
@@ -9,7 +9,7 @@ public class Person {
 
 
     static void main() {
-        Person person= new Person();
+        Health person= new Health();
 
         System.out.println(person.publicData);
         System.out.println(person.privateData);
