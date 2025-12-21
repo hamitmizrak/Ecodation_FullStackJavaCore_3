@@ -5,6 +5,18 @@ import java.util.UUID;
 public class Main {
 
     static void main() {
+        // STUDENT
+        PersonDto personDto= new TeacherDto();  //polymorhism
+        //PersonDto personDto= new StudentDto();
+        personDto.setFirstName("person adı-1");
+        personDto.setLastName("person soyadı-1");
+        personDto.setUsername("person kullanıcı adı-1");
+        personDto.setPassword(UUID.randomUUID().toString());
+        System.out.println(personDto);
+        personDto.fullName();  //fullName(polymorphism)
+
+
+        System.out.println("/////////////////////////");
 
         // STUDENT
         StudentDto student= new StudentDto();
@@ -14,6 +26,7 @@ public class Main {
         student.setPassword(UUID.randomUUID().toString());
         System.out.println(student);
         student.fullName();  //fullName(polymorphism)
+        student.passwordGenerate(5);
         student.create(student); //create
         student.read(4); //read
         student.delete(4); //delete
@@ -29,6 +42,7 @@ public class Main {
         teacher.setPassword(UUID.randomUUID().toString());
         System.out.println(teacher);
         teacher.fullName();  //fullName
+        teacher.passwordGenerate(6);
         teacher.create(teacher); //create
         teacher.read(2); //read
         teacher.delete(2); //delete

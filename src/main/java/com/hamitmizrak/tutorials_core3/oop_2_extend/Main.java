@@ -5,6 +5,17 @@ import java.util.UUID;
 public class Main {
 
     static void main() {
+        // STUDENT
+        PersonDto personDto= new PersonDto();
+        personDto.setFirstName("person adı-1");
+        personDto.setLastName("person soyadı-1");
+        personDto.setUsername("person kullanıcı adı-1");
+        personDto.setPassword(UUID.randomUUID().toString());
+        System.out.println(personDto);
+        personDto.fullName();  //fullName(polymorphism)
+
+
+        System.out.println("/////////////////////////");
 
         // STUDENT
         StudentDto student= new StudentDto();

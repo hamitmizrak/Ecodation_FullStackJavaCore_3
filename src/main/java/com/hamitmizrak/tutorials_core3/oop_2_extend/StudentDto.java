@@ -1,6 +1,6 @@
 package com.hamitmizrak.tutorials_core3.oop_2_extend;
 
-public class StudentDto extends Person implements IDatabaseConnection<StudentDto> {
+public class StudentDto extends PersonDto implements IDatabaseConnection<StudentDto> {
 
 
     @Override

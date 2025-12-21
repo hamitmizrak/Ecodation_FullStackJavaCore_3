@@ -1,6 +1,6 @@
 package com.hamitmizrak.tutorials_core3;
 
-public class StudentDto extends Person implements IDatabaseConnection<StudentDto> {
+public class StudentDto extends PersonDto implements IDatabaseConnection<StudentDto> {
 
 
     @Override
@@ -21,5 +21,10 @@ public class StudentDto extends Person implements IDatabaseConnection<StudentDto
     @Override
     public void delete(int id) {
         System.out.println("DELETE "+ id+" nolu nesne silindi");
+    }
+
+    @Override
+    void passwordGenerate(int size) {
+        System.out.println("Student PasswordGenerate: "+size);
     }
 } //end Student

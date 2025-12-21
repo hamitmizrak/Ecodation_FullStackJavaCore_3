@@ -1,6 +1,6 @@
 package com.hamitmizrak.tutorials_core3.oop_2_extend;
 
-public class TeacherDto  extends Person implements IDatabaseConnection<TeacherDto>
+public class TeacherDto  extends PersonDto implements IDatabaseConnection<TeacherDto>
 {
 
 

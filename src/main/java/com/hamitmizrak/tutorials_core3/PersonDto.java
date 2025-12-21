@@ -10,7 +10,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
+
+// PERSON
+abstract public class PersonDto {
     // Field
     private String firstName;
     private String lastName;
@@ -21,6 +23,9 @@ public class Person {
     public void fullName() {
         System.out.println(this.firstName + " " + this.lastName);
     }
+
+    // Gövdesiz metot
+    abstract void passwordGenerate(int size);
 
     // ToString
     @Override
