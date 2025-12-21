@@ -25,7 +25,7 @@ abstract public class PersonDto {
     }
 
     // Gövdesiz metot
-    abstract void passwordGenerate(int size);
+    abstract void passwordGenerate();
 
     // ToString
     @Override

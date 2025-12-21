@@ -27,7 +27,7 @@ public class Main {
         student.setPassword(UUID.randomUUID().toString());
         System.out.println(student);
         student.fullName();  //fullName(polymorphism)
-        student.passwordGenerate(5);
+        student.passwordGenerate();
         student.create(student); //create
         student.read(4); //read
         student.delete(4); //delete
@@ -44,7 +44,7 @@ public class Main {
         teacher.setPassword(UUID.randomUUID().toString());
         System.out.println(teacher);
         teacher.fullName();  //fullName
-        teacher.passwordGenerate(6);
+        //teacher.passwordGenerate();
         teacher.create(teacher); //create
         teacher.read(2); //read
         teacher.delete(2); //delete

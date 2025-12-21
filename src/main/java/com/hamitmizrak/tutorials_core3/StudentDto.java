@@ -1,8 +1,11 @@
 package com.hamitmizrak.tutorials_core3;
 
+import com.hamitmizrak.SpecialColor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
+
+import java.util.Scanner;
 
 // LOMBOK
 @Getter
@@ -37,8 +40,12 @@ public class StudentDto extends PersonDto implements IDatabaseConnection<Student
 
     // GENERATE
     @Override
-    void passwordGenerate(int size) {
-        System.out.println("Student PasswordGenerate: "+size);
+    void passwordGenerate() {
+        System.out.print(SpecialColor.BLUE+"\nStudent PasswordGenerate için size giriniz: "+SpecialColor.RESET);
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+       String generate= PasswordUtil.generateMixedPassword(number);
+        System.out.println("Eleman sayısı: "+number+" olan random şifre: "+SpecialColor.RED+generate  +SpecialColor.RESET);
     }
 
     // CREATE
