@@ -37,4 +37,4 @@ abstract public class PersonDto {
                 ", password='" + password + '\'' +
                 '}';
     }
-}
+} //end PersonDto
