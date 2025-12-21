@@ -1,31 +1,31 @@
-package com.hamitmizrak.tutorials_core3;
+package com.hamitmizrak.tutorials_core3.oop_1_classic;
 
-public class Student implements IDatabaseConnection{
+public class Teacher  implements IDatabaseConnection {
     // Field
     private String firstName;
     private String lastName;
     private String username;
 
     // CTOR
-    public Student() {
+    public Teacher() {
     }
 
     // CTOR
-    public Student(String firstName, String lastName, String username) {
+    public Teacher(String firstName, String lastName, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
     }
 
     // Method
-    public void fullName(){
-        System.out.println(this.firstName+" "+this.lastName);
+    public void fullName() {
+        System.out.println(this.firstName + " " + this.lastName);
     }
 
     // ToString
     @Override
     public String toString() {
-        return "Student{" +
+        return "Teacher{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", username='" + username + '\'' +
@@ -60,24 +60,24 @@ public class Student implements IDatabaseConnection{
     // CREATE
     @Override
     public void create(Object o) {
-        System.out.println("Kaydedildi "+o);
+        System.out.println("Kaydedildi " + o);
     }
 
     // FIND
     @Override
     public void read(int id) {
-        System.out.println(id+" nolu nesne bulundu");
+        System.out.println(id + " nolu nesne bulundu");
     }
 
     // UPDATE
     @Override
     public void update(int id, Object o) {
-        System.out.println(id+" nolu nesne güncellendi "+o);
+        System.out.println(id + " nolu nesne güncellendi " + o);
 
     }
 
     @Override
     public void delete(int id) {
-        System.out.println(id+ " nolu nesne silindi");
+        System.out.println(id + " nolu nesne silindi");
     }
-} //end Student
+}

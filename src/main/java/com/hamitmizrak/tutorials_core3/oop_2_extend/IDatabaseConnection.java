@@ -1,4 +1,4 @@
-package com.hamitmizrak.tutorials_core3;
+package com.hamitmizrak.tutorials_core3.oop_2_extend;
 
 public interface IDatabaseConnection<T> {
 
