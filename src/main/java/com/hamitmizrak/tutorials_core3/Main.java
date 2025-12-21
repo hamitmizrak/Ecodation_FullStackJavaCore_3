@@ -20,6 +20,7 @@ public class Main {
 
         // STUDENT
         StudentDto student= new StudentDto();
+        student.setStudentNumber(44);
         student.setFirstName("öğrenci adı-1");
         student.setLastName("öğrenci soyadı-1");
         student.setUsername("öğrenci kullanıcı adı-1");
@@ -36,6 +37,7 @@ public class Main {
 
         // TEACHER
         TeacherDto teacher= new TeacherDto();
+        teacher.setTeacherNumber(23);
         teacher.setFirstName("Öğretmen adı-1");
         teacher.setLastName("Öğretmen soyadı-1");
         teacher.setUsername("Öğretmen kullanıcı adı-1");
